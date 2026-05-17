@@ -32,5 +32,8 @@ for c in fertility_spots:
     spread_fertility(tuple(c))
 
 
-def tick():
-    rng.random()
+def grow_plants():
+    rolls = rng.random(world_map.shape)
+    grow_mask = (rolls < REGROW_RATE * fertility_map) & (world_map == 0)
+    world_map[grow_mask] = 1
+    
