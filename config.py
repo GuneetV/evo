@@ -1,0 +1,14 @@
+import numpy as np
+
+MAP_DIM = 100
+
+
+REGROW_RATE = 0.01
+FERTILITY_PATCHES = 10
+FERTILITY_SPREAD = 8
+FERTILITY_BOOST = 10
+FERTILITY_DECAY = 0.8
+FERTILITY_MIN = 0.05
+
+SEED = 42
+rng = np.random.default_rng(SEED)
